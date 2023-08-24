@@ -5,5 +5,11 @@
   "main": "index.js",
   "repository": "git@github.com:kanokgan/js-code-interview.git",
   "author": "kanokgan@gmail.com <kanokgan@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5"
+  }
 }
