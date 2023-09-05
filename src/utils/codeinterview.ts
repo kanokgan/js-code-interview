@@ -11,24 +11,24 @@ export const TwoSum = (nums: number[], target: number): number[] => {
 };
 
 export const ValidParentheses = (s: string): boolean => {
-    if (s == null || s.length < 2 || s.length % 2 == 1) return false;
+  if (s == null || s.length < 2 || s.length % 2 == 1) return false;
 
-    const dict = new Map();
-    dict.set('}', '{');
-    dict.set(')', '(');
-    dict.set(']', '[');
-  
-    let openBracket: string[] = []
-  
-    for (const c of s) {
-      if (['(', '[', '{'].includes(c)) {
-        openBracket.push(c);
-      } else if (openBracket.pop() !== dict.get(c)){
-          return false;
-      }
+  const dict = new Map();
+  dict.set("}", "{");
+  dict.set(")", "(");
+  dict.set("]", "[");
+
+  let openBracket: string[] = [];
+
+  for (const c of s) {
+    if (["(", "[", "{"].includes(c)) {
+      openBracket.push(c);
+    } else if (openBracket.pop() !== dict.get(c)) {
+      return false;
     }
-  
-    if (openBracket.length != 0) return false;
-    
-    return true;
+  }
+
+  if (openBracket.length != 0) return false;
+
+  return true;
 };
